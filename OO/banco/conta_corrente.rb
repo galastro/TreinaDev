@@ -7,4 +7,20 @@ class ContaCorrente < Conta
         super(numero, titular, saldo)
         @limite = limite
     end
+    def sacar(valor)
+        if (valor > saldo+limite)
+            puts "saldo insuficiente!"
+        else
+            @saldo -= valor # ou @saldo ou self.saldo
+        end
+    end 
+    def transferir(conta_destino, valor)
+        if (valor > saldo+limite)
+            puts "saldo insuficiente!"
+        else
+        sacar(valor)
+        conta_destino.depositar(valor)
+        end   
+    end 
 end
+

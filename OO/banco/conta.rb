@@ -27,8 +27,8 @@ class Conta
         if (valor > saldo)
             puts "saldo insuficiente!"
         else
-            sacar(valor)
-            conta_destino.depositar(valor)
-        end
+        sacar(valor)
+        conta_destino.depositar(valor)
+        end   
     end 
 end
