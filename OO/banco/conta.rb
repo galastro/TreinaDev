@@ -1,7 +1,10 @@
+require_relative 'cliente'
+
 class Conta
     attr_reader :numero, :titular #somente leitura
     #attr_writer para modificação.
     attr_accessor :saldo #ambos.
+
     def initialize(numero, titular, saldo)
         @numero = numero
         @titular = titular
@@ -27,5 +30,5 @@ class Conta
             sacar(valor)
             conta_destino.depositar(valor)
         end
-
+    end 
 end
